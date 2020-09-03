@@ -1,0 +1,81 @@
+header{
+    background-color: #146fc5;
+    height: 95px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 35px;
+}
+
+header h1{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #0e0e0e;
+    margin: 0 0 5px;
+}
+
+.icons{
+    font-size: 30pt;
+}
+
+.search-bar{
+    background-color: #ebebeb;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    border-radius: 15px;
+    border: none;
+}
+
+.search-bar input{
+    width: 550px;
+    height: 30px;
+    background-color: transparent;
+    font-size: 14pt;
+    border: none;
+}
+
+.search-bar button{
+    height: 30px;
+    width:  35px;
+    background-color: transparent;
+    border: none;
+    float: right;
+}
+
+.search-bar button .icons{
+    font-size: 20pt;
+    padding: 2px 0 0;
+}
+
+.perfil-options li{
+    display: inline-flex;
+    list-style: none;
+    margin: 0 10px;
+    width:  45px;
+    height: 45px;
+    border-radius: 10px;
+    padding: 5px
+}
+
+.perfil-options li:hover{ 
+    transition: 200ms;
+    background-color: #0663b9;
+}
+
+.perfil-options .cart .icons{
+    font-size: 25pt
+}
+
+.perfil-options .perfil-icon{
+    border: 2px solid #000;
+    border-radius: 25px;
+    padding: 0 2px;
+    background: #ececec;
+}
+
+.perfil-options .perfil-icon:hover{ 
+    transition: 200ms;
+    background-color: #ffffffe7;
+}
