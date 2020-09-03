@@ -75,39 +75,6 @@ usuario_remover(){
     }
 
  
-//Entrega
-    entrega_inserir(req, res){
-        const entrega_inserida = usuario.create(req.body)
-    }
-
-    entrega_listar(){
-        const listar_entrega = usuario.find()
-    }
-
-    entrega_alterar(){
-        const aterar_entrega = usuario.findByIdAndUpdate()
-    }
-
-    entrega_remover(){
-        const remover_entrega = usuario.findByIdAndRemove()
-    }
-
-//Mensagem
-    mensagem_inserir(req, res){
-        const mensagem_inserida = usuario.create(req.body)
-    }
-
-    mensagem_listar(){
-        const listar_mensagem = usuario.find()
-    }
-
-    mensagem_buscar(){
-        const buscar_mensagem = usuario.findById()
-    }
-
-    mensagem_remover(){
-        const remover_mensagem = usuario.findByIdAndRemove()
-    }
 
 }
 
