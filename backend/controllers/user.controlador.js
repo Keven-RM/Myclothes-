@@ -72,9 +72,7 @@ usuario_remover(){
 
     endereco_remover(){
         const remover_endereco = usuario.findByIdAndRemove()
-    }
-
- 
+    } 
 
 }
 

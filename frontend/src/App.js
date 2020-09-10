@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './app.css'
 
 //components
 import Header from './components/header'
+import Footer from './components/footer'
 
-function App() {
-  return (
-    <Header/>
-  );
-}
+const App = () => (
+    <Header />
+);
 
 export default App;

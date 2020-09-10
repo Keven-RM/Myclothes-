@@ -1,17 +1,22 @@
 header{
-    background-color: #146fc5;
-    height: 95px;
+    background-color: #03173B;
+    height: 135px;
     width: 100%;
+    padding: 20px 35px;
+}
+
+header .header-top{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 35px;
 }
 
 header h1{
-    font-family: 'Source Sans Pro', sans-serif;
-    color: #0e0e0e;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-size: 35pt;
     margin: 0 0 5px;
+    cursor: pointer;
 }
 
 .icons{
@@ -19,13 +24,14 @@ header h1{
 }
 
 .search-bar{
-    background-color: #ebebeb;
+    background-color: #ffff;
     height: 35px;
     display: flex;
     align-items: center;
     padding: 0 15px;
     border-radius: 15px;
     border: none;
+    transform: translateX(-35px);
 }
 
 .search-bar input{
@@ -47,6 +53,7 @@ header h1{
 .search-bar button .icons{
     font-size: 20pt;
     padding: 2px 0 0;
+    color: #383838;
 }
 
 .perfil-options li{
@@ -61,7 +68,7 @@ header h1{
 
 .perfil-options li:hover{ 
     transition: 200ms;
-    background-color: #0663b9;
+    background-color: #3a2df31c;
 }
 
 .perfil-options .cart .icons{
@@ -78,4 +85,19 @@ header h1{
 .perfil-options .perfil-icon:hover{ 
     transition: 200ms;
     background-color: #ffffffe7;
+}
+
+header .header-down ul{
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+header .header-down ul li{
+    margin: 0 15px;
+    font-size: 15px;
+    list-style: none;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
 }
