@@ -23,6 +23,11 @@ header h1{
     font-size: 30pt;
 }
 
+.icons:hover{
+    color:#e7e7e7;
+    transition: 300ms;
+}
+
 .search-bar{
     background-color: #ffff;
     height: 35px;
@@ -66,25 +71,14 @@ header h1{
     padding: 5px
 }
 
-.perfil-options li:hover{ 
-    transition: 200ms;
-    background-color: #3a2df31c;
-}
-
 .perfil-options .cart .icons{
     font-size: 25pt
 }
 
 .perfil-options .perfil-icon{
-    border: 2px solid #000;
     border-radius: 25px;
     padding: 0 2px;
     background: #ececec;
-}
-
-.perfil-options .perfil-icon:hover{ 
-    transition: 200ms;
-    background-color: #ffffffe7;
 }
 
 header .header-down ul{

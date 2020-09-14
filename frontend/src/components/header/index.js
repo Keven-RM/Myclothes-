@@ -21,7 +21,7 @@ const Header = () =>{
                         <IoMdCart className="icons" alt="carrinho de compras"/>
                     </li>
                     <li className="perfil-icon">
-                        <IoMdPerson className="icons" alt="icone do perfil"/>
+                        <IoMdPerson className="icons" alt="perfil"/>
                     </li>
                 </ul>
             </div>
