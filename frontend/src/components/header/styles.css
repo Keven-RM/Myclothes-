@@ -1,97 +1,36 @@
 header{
     background-color: #03173B;
-    height: 135px;
+    height: 70px;
     width: 100%;
     padding: 20px 35px;
-}
-
-header .header-top{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header h1{
-    font-family: 'Roboto', sans-serif;
-    color: #fff;
-    font-size: 35pt;
-    margin: 0 0 5px;
-    cursor: pointer;
+header .title h1{
+    font-family: 'Rubik', sans-serif;
+    color: #eeeeee;
+    font-weight: normal;
 }
 
-.icons{
-    font-size: 30pt;
-}
 
-.icons:hover{
-    color:#e7e7e7;
-    transition: 300ms;
-}
 
-.search-bar{
-    background-color: #ffff;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    padding: 0 15px;
-    border-radius: 15px;
-    border: none;
-    transform: translateX(-35px);
-}
-
-.search-bar input{
-    width: 550px;
-    height: 30px;
-    background-color: transparent;
-    font-size: 14pt;
-    border: none;
-}
-
-.search-bar button{
-    height: 30px;
-    width:  35px;
-    background-color: transparent;
-    border: none;
-    float: right;
-}
-
-.search-bar button .icons{
-    font-size: 20pt;
-    padding: 2px 0 0;
-    color: #383838;
-}
-
-.perfil-options li{
+header .perfil ul li{
     display: inline-flex;
-    list-style: none;
-    margin: 0 10px;
-    width:  45px;
-    height: 45px;
-    border-radius: 10px;
-    padding: 5px
+    color: aliceblue;
+    font-size: 20px;
 }
 
-.perfil-options .cart .icons{
-    font-size: 25pt
+header .perfil ul li{
+    height: 40px;
+    width:  40px;
+    padding: 10px;
 }
 
-.perfil-options .perfil-icon{
+header .perfil ul .perfil-icon{
+    background-color: #000000;
     border-radius: 25px;
-    padding: 0 2px;
-    background: #ececec;
-}
-
-header .header-down ul{
-    margin: 20px 0;
-    display: flex;
-    justify-content: center;
-}
-
-header .header-down ul li{
-    margin: 0 15px;
-    font-size: 15px;
-    list-style: none;
-    color: #fff;
-    font-weight: bold;
-    font-family: 'Roboto', sans-serif;
+    margin: 0 10px;
+    border: 1px solid white;
 }

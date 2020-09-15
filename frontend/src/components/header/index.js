@@ -14,7 +14,7 @@ const Header = () =>{
     return(
         <header>
             <div className="title">
-                <h2>Myclothes</h2>
+                <h1>Myclothes</h1>
             </div>
             <div className="search-bar">
                 <form>
@@ -26,9 +26,9 @@ const Header = () =>{
             </div>
             <div className="perfil">
                 <ul>
-                    <li><FaShoppingCart/></li>
-                    <li><FaBell/></li>
-                    <li><FaUserAlt/></li>
+                    <li><FaShoppingCart className="icons" /></li>
+                    <li><FaBell className="icons" /></li>
+                    <li  className="perfil-icon"><FaUserAlt className="icons"/></li>
                 </ul>
             </div>
         </header>
