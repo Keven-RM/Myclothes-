@@ -1,37 +1,34 @@
 import React from 'react';
 import './styles.css';
 
-//icones
-import { IoMdPerson,
-         IoIosSearch,
-         IoMdCart,
-} from 'react-icons/io';
+//icones - react-icons 
+
+import { 
+    FaSistrix,
+    FaBell,
+    FaShoppingCart,
+    FaUserAlt
+} from 'react-icons/fa';
 
 const Header = () =>{
     return(
         <header>
-            <div className="header-top">
-                <h1>Myclothes</h1>
-                <form className="search-bar">
-                    <input type="text" placeholder=" Pesquise pelo produto" name="search"/>
-                    <button type="submit"><IoIosSearch className="icons" alt="icone de pesquisa"/></button>
-                </form>
-                <ul className="perfil-options">
-                    <li className="cart">
-                        <IoMdCart className="icons" alt="carrinho de compras"/>
-                    </li>
-                    <li className="perfil-icon">
-                        <IoMdPerson className="icons" alt="perfil"/>
-                    </li>
-                </ul>
+            <div className="title">
+                <h2>Myclothes</h2>
             </div>
-            <div className="header-down">
+            <div className="search-bar">
+                <form>
+                    <input name="search" type="text" />
+                    <button type="submit">
+                        <FaSistrix />
+                    </button>
+                </form>
+            </div>
+            <div className="perfil">
                 <ul>
-                    <li><p>Ofertas</p></li>
-                    <li><p>Lançamentos</p></li>
-                    <li><p>Ajuda</p></li>
-                    <li><p>Roupas</p></li>
-                    <li><p>Mais vendidos</p></li>
+                    <li><FaShoppingCart/></li>
+                    <li><FaBell/></li>
+                    <li><FaUserAlt/></li>
                 </ul>
             </div>
         </header>
