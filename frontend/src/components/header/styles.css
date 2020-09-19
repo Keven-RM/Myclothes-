@@ -15,6 +15,35 @@ header .title h1{
 }
 
 
+header .search-bar{
+    background-color: #f1f1f1;
+    border-radius: 25px;
+    width: 50%;
+    border: 2px solid #000000de;
+}
+
+header form{
+    display: flex;
+    padding: 3px 10px;
+}
+header form input{
+    font-size: 14pt;
+    outline: none;
+    border: none;
+    width: 95%;
+    background-color: #ffffff2f;
+}
+
+header form button{
+    font-size: 20px;
+    border: none;
+    transform: translateY(3px);
+}
+
+header form button:hover{
+    transition: 400ms;
+    color: #4b4b4bef;
+}
 
 header .perfil ul li{
     display: inline-flex;

@@ -5,14 +5,17 @@ import './app.css'
 import Header from './components/header'
 import Footer from './components/footer'
 
-const App = () => (
-   <div>
-   <Header />
-   <section>
+import Lista from './pages/home'
 
-   </section>
+
+const App = () => (
+   <React.Fragment>
+   <Header />
+   <React.Fragment>
+      <Lista />
+   </React.Fragment>
    <Footer />
-   </div>
+   </React.Fragment>
 );
 
 export default App;
