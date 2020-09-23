@@ -5,7 +5,7 @@ import Image from '../../image.jpg'
 import { GiArmoredPants, GiRunningShoe} from 'react-icons/gi';
 import { FaTshirt, FaTransgender } from 'react-icons/fa';
 
-const Lista = () =>{
+const Home = () =>{
     return(
         <>
         <>
@@ -71,4 +71,4 @@ const Lista = () =>{
     )
 }
 
-export default Lista;
+export default Home;
