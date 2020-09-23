@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 
 //BANCO DE DADOS
 
-mongoose.connect('mongodb+srv://gs:2020grupo12@cluster0.r2zex.mongodb.net/Myclothes?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://gs:2020grupo12@cluster0.mosqm.mongodb.net/Myclothes?retryWrites=true&w=majority', {
     useNewUrlParser:true,
     useCreateIndex:true,
     useFindAndModify:false,
@@ -16,6 +16,7 @@ mongoose.connect('mongodb+srv://gs:2020grupo12@cluster0.r2zex.mongodb.net/Myclot
 })
 
 app.use(express.static('html'));
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.use('/',            require('./router/home.rota'));

@@ -13,7 +13,7 @@ class ProdutoController {
     }
 
     produto_listar(){
-        const listar_produto = produto.find()
+        const listar_produto = produto.find();
     }
 
     produto_buscar(){
