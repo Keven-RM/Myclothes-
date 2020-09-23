@@ -2,6 +2,9 @@ import React from 'react';
 import './styles.css';
 import Image from '../../image.jpg'
 
+import { GiArmoredPants, GiRunningShoe} from 'react-icons/gi';
+import { FaTshirt, FaTransgender } from 'react-icons/fa';
+
 const Lista = () =>{
     return(
         <>
@@ -53,6 +56,17 @@ const Lista = () =>{
                 </div>
             </main>
         </section>
+        <>
+        <section className="category">
+            <h1>Categoria</h1>
+            <ul>
+                <li><GiArmoredPants className="icons"/> <p>Calça</p></li>
+                <li><FaTransgender className="icons"/><p>Gênero</p></li>
+                <li><GiRunningShoe className="icons"/><p>Tênis</p></li>
+                <li><FaTshirt className="icons"/><p>Camisa</p></li>
+            </ul>
+        </section>
+        </>
         </>
     )
 }

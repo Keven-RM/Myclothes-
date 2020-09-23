@@ -2,13 +2,13 @@ import React from 'react';
 import './styles.css';
 
 //icones - react-icons 
-
 import { 
     FaSistrix,
     FaBell,
     FaShoppingCart,
     FaUserAlt
 } from 'react-icons/fa';
+
 
 const Header = () =>{
     return(
@@ -32,8 +32,8 @@ const Header = () =>{
                 </ul>
             </div>
         </header>
-    );
+    )
+    
 }
 
 export default Header;
-
