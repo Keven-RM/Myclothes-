@@ -1,11 +1,11 @@
 container .user-title{    
-    width: 79%;
+    width: 59%;
     margin: 45px auto 10px;
     font: 600  35px 'Roboto';
 }
 
 section{
-    width: 80%;
+    width: 60%;
     height: auto;
     display: flex;
     flex-direction: column;
