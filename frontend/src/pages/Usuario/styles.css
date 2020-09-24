@@ -1,0 +1,39 @@
+container .user-title{    
+    width: 79%;
+    margin: 45px auto 10px;
+    font: 600  35px 'Roboto';
+}
+
+section{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+}
+
+section h1{
+    margin: 10px;
+    font: 500 30px 'Roboto';
+}
+
+section div{
+    height: 45px;
+    border-radius: 7px;
+    background-color:#C4C4C4;
+    margin:  5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    font: 14pt 'Rubik';
+}
+
+section div p{
+    font-size: 12pt;
+    color: #020202c4;
+}
+
+section div .icons{
+    font-size: 25px;
+}

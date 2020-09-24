@@ -4,15 +4,15 @@ import './app.css'
 //components
 import Header from './components/header'
 import Footer from './components/footer'
-
-import Lista from './pages/home'
+import Lista from './pages/Home'
+import User from './pages/Usuario'
 
 
 const App = () => (
    <React.Fragment>
    <Header />
    <React.Fragment>
-      <Lista />
+      <User />
    </React.Fragment>
    <Footer />
    </React.Fragment>
