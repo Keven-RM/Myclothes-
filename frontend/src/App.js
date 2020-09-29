@@ -4,7 +4,7 @@ import './app.css'
 //components
 import Header from './components/header'
 import Footer from './components/footer'
-import Lista from './pages/Home'
+import Lista from './pages/Listagem'
 import User from './pages/Usuario'
 
 
@@ -12,7 +12,7 @@ const App = () => (
    <React.Fragment>
    <Header />
    <React.Fragment>
-      <User />
+      <Lista />
    </React.Fragment>
    <Footer />
    </React.Fragment>

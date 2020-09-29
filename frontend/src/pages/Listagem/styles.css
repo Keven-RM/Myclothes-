@@ -1,0 +1,55 @@
+.resultado{
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    height: 50px;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+.resultado p{
+    font-size: 20pt;
+    margin: 5px 0 0;
+}
+
+main{
+    width: 300px;
+    background: #d3d2d2;
+    margin:30px;
+    padding: 10px;
+}
+main h1,h2{
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+main .preco{
+    display: inline-block;
+    padding: 15px 0;
+}
+
+main .preco h2{
+    padding: 10px 0;
+}
+
+main form label{
+    font-size: 21px;
+    font-family: 'Rubik', sans-serif;
+}
+
+main .preco input[type="text"]{
+    width: 60px;
+    margin: 0 5px;
+    font-size: 20px;
+    outline: none;
+}
+
+main .preco button{
+    background-color: #8a8a8a;
+    height: 30px;
+    width:  65px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
