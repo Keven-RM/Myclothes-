@@ -49,7 +49,7 @@ const Lista = () =>{
             <div className="tamanho">
                 <form>
                 <h2>Tamanhos</h2>
-                <input list="tamanhos" name="tamanho" id="tamanho" />
+                <input list="tamanhos" name="tamanho" />
                  <datalist id="tamanhos">
                     <option value="PP" />
                     <option value="P" />
@@ -61,7 +61,34 @@ const Lista = () =>{
                  <button type="submit">Aplicar</button>
                  </form>
             </div>
+            <div className="marca">
+                <form>
+                <h2>Marca</h2>
+                <input list="marca" name="marca" />
+                 <datalist id="marca">
+                    <option value="nike" />
+                    <option value="oakley" />
+                    <option value="adidas" />
+                    <option value="fila" />
+                 </datalist>
+                 <button type="submit">Aplicar</button>
+                 </form>
+            </div>
+            <div className="genero">
+                <form>
+                    <h2>Gênero</h2>
+                    <div className="labels">
+                        <label for="feminino"><div>Feminino</div></label>
+                        <label for="masculino"><div>Masculino</div></label>
+                    </div>
+                
+                    <input type="radio" name="genero" id="masculino" value="masculino" />  
+                    <input type="radio" name="genero" id="feminino" value="feminino" />  
+                    <button type="submit">Aplicar</button>
+                </form>
+            </div>
         </main>
+        
         </>
 
     )

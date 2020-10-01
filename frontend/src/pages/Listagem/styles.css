@@ -73,13 +73,12 @@ main .preco button{
     height: 35px;
     width:  35px;
     border: 1px solid black;
+    cursor: pointer;
 }
-
 
 .cor input{
     display: none;
 }
-
 
 .cor button{
     background-color: #8a8a8a;
@@ -117,6 +116,7 @@ main .preco button{
 }
 
 
+
 .tamanho{
     border-top: 1px solid black;
 }
@@ -125,7 +125,98 @@ main .preco button{
     margin: 15px 0;
 }
 
-.tamanho form datalist{
+.tamanho form input{
     outline: none;
-    font-size: 15px;
+    font-size: 25px;
+    padding: 5px 0;
+    font: 12px Arial, Helvetica, sans-serif;
+    width: 200px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px -2px rgba(0,0,0,0.51);
+}
+
+.tamanho form button{
+    background-color: #8a8a8a;
+    height: 35px;
+    width:  65px;
+    margin: 15px 7px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.marca{
+    border-top: 1px solid black;
+}
+
+.marca form h2{
+    margin: 5px 0;
+}
+
+.marca form input{
+    outline: none;
+    font-size: 25px;
+    padding: 5px 0;
+    font: 12px Arial, Helvetica, sans-serif;
+    width: 200px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px -2px rgba(0,0,0,0.51);
+
+}
+
+.marca form button{
+    background-color: #8a8a8a;
+    height: 35px;
+    width:  65px;
+    margin: 15px 7px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.genero form label div{
+    background-color: #e7e7e7;
+    height: 35px;
+    width:  110px;
+    padding: 5px;
+    margin: 15px 7px;
+    border-radius: 5px;
+    border: 1px solid #0000009d;
+    outline: none;
+    padding: auto;
+    cursor: pointer;
+}
+
+.genero{
+    border-top: 1px solid black;
+}
+
+.genero form h2{
+    margin: 10px 0;
+}
+
+.genero form input{
+    display: none;
+}
+
+.genero .labels{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;   
+}
+
+
+.genero form button{
+    background-color: #8a8a8a;
+    height: 35px;
+    width:  100%;
+    margin: 10px 0px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
 }
