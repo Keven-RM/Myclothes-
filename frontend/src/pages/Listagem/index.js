@@ -21,10 +21,46 @@ const Lista = () =>{
                     <button type="submit">Aplicar</button>
                 </form>
             </div>
-            <form className="cor">
+            <div className="cor"> 
+                <form>
                 <h2>Cor</h2>
-                <input type="text" />
-            </form>
+                <label for="preto"><div></div></label>
+                <input type="radio" name="cor" id="preto" value="preto" />
+
+                <label for="azul"><div></div></label>
+                <input type="radio" name="cor" id="azul" value="azul" />
+
+                <label for="vermelho"><div></div></label>
+                <input type="radio" name="cor" id="vermelho" value="vermelho" />
+
+                <label for="amarelo"><div></div></label>
+                <input type="radio" name="cor" id="amarelo" value="amarelo" />
+
+                <label for="verde"><div></div></label>
+                <input type="radio" name="cor" id="verde" value="verde" />
+
+                <label for="branco"><div></div></label>
+                <input type="radio" name="cor" id="branco" value="branco" />
+
+                <button type="submit">Aplicar</button>
+                </form>
+            </div>
+
+            <div className="tamanho">
+                <form>
+                <h2>Tamanhos</h2>
+                <input list="tamanhos" name="tamanho" id="tamanho" />
+                 <datalist id="tamanhos">
+                    <option value="PP" />
+                    <option value="P" />
+                    <option value="M" />
+                    <option value="G" />
+                    <option value="GG" />
+                    <option value="XGG" />
+                 </datalist>
+                 <button type="submit">Aplicar</button>
+                 </form>
+            </div>
         </main>
         </>
 
