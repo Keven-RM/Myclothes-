@@ -13,6 +13,12 @@
     margin: 5px 0 0;
 }
 
+container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 2fr 80px;
+}
+
 main{
     width: 300px;
     background: #d3d2d2;
@@ -219,4 +225,83 @@ main .preco button{
     border-radius: 5px;
     border: none;
     outline: none;
+}
+
+
+.listagem{
+    width: 950px;
+    margin: 30px 0;
+    display: flex;
+    background-color: hotpink;
+}
+
+.listagem ul{
+    display: flex;
+    justify-content: center;
+}
+.listagem li{
+    width:  250px;
+    height: 350px;
+    background: #f1f1f1;
+    position: relative;
+    list-style: none;
+    margin: 15px;
+}
+
+.listagem li .product-image{
+    overflow: hidden;
+    width: 250px;
+    height: 285px;
+    display: flex;
+}
+
+.listagem li .product-image img{
+    width: 250px;
+    margin: auto;
+    transition: 0.2s;
+}
+
+.listagem li .product-image img:hover{
+    transition: 300ms;
+    transform: scale(1.5);
+    
+}
+
+.listagem li .product-info{
+    height: 65px;
+    width: 100%;
+    background-color: #cccccc;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.listagem li .product-info p{
+    display: flex;
+    justify-content: center;
+    font-size: 16pt;
+    margin: 5px 0;
+    font-weight: 600;
+    color: #030303;
+}
+
+.listagem li .product-info p:last-child{
+    font-weight: 500;
+}
+
+.listagem li .product-info p:hover{
+    color: #202020;
+}
+
+
+.pagina{
+    max-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }

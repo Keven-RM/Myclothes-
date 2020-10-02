@@ -1,6 +1,9 @@
 import React from 'react';
 import './styles.css';
 
+import { GiArmoredPants, GiRunningShoe} from 'react-icons/gi';
+import { FaTshirt, FaTransgender } from 'react-icons/fa';
+
 const Lista = () =>{
     return(
         <>
@@ -9,6 +12,7 @@ const Lista = () =>{
             <p>Calça Jeans</p>
         </div>
 
+        <container>
         <main>
             <h1>Filtros</h1>
             <div className="preco">
@@ -88,9 +92,52 @@ const Lista = () =>{
                 </form>
             </div>
         </main>
-        
+        <section className="listagem">
+                <ul>
+                        <li>
+                        <a href="/i">
+                        <div className="product-image">
+                            <img src={Image} alt={Image} />
+                        </div>
+                        <div className="product-info" >
+                            <p>R$ 200,00</p>
+                            <p>Calça Jeans</p>
+                        </div>
+                        </a>
+                        </li>  
+                        <li>
+                        <a href="/i">
+                        <div className="product-image">
+                            <img src={Image} alt={Image} />
+                        </div>
+                        <div className="product-info" >
+                            <p>R$ 200,00</p>
+                            <p>Calça Jeans</p>
+                        </div>
+                        </a>
+                        </li>  
+                        <li>
+                        <a href="/i">
+                        <div className="product-image">
+                            <img src={Image} alt={Image} />
+                        </div>
+                        <div className="product-info" >
+                            <p>R$ 200,00</p>
+                            <p>Calça Jeans</p>
+                        </div>
+                        </a>
+                        </li>  
+                </ul>
+        </section>
+        <div className="pagina">
+            <button>Seta</button>
+            <h2>01</h2>
+            <button>Seta</button>
+        </div>
+        </container>
         </>
 
     )
 }
+
 export default Lista
