@@ -1,9 +1,9 @@
 import React from 'react';
 import './styles.css';
 
-import { GiArmoredPants, GiRunningShoe} from 'react-icons/gi';
-import { FaTshirt, FaTransgender } from 'react-icons/fa';
+import {MdArrowForward, MdArrowBack} from 'react-icons/md'
 
+import Image from './image.jpg'
 const Lista = () =>{
     return(
         <>
@@ -130,9 +130,9 @@ const Lista = () =>{
                 </ul>
         </section>
         <div className="pagina">
-            <button>Seta</button>
+            <button><MdArrowBack className="arrow" /></button>
             <h2>01</h2>
-            <button>Seta</button>
+            <button><MdArrowForward className="arrow" /></button>
         </div>
         </container>
         </>

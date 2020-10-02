@@ -230,9 +230,9 @@ main .preco button{
 
 .listagem{
     width: 950px;
-    margin: 30px 0;
+    margin: 30px 10px;
     display: flex;
-    background-color: hotpink;
+    background-color: #9b9b9b2a;
 }
 
 .listagem ul{
@@ -242,7 +242,6 @@ main .preco button{
 .listagem li{
     width:  250px;
     height: 350px;
-    background: #f1f1f1;
     position: relative;
     list-style: none;
     margin: 15px;
@@ -257,7 +256,6 @@ main .preco button{
 
 .listagem li .product-image img{
     width: 250px;
-    margin: auto;
     transition: 0.2s;
 }
 
@@ -270,7 +268,8 @@ main .preco button{
 .listagem li .product-info{
     height: 65px;
     width: 100%;
-    background-color: #cccccc;
+    background-color: #ececec;
+    border-radius: 0;
     font-family: 'Roboto', sans-serif;
     font-weight: normal;
     position: absolute;
@@ -304,4 +303,24 @@ main .preco button{
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 3;
+} 
+
+.pagina h2{
+    font-size: 24pt;
+}
+
+.pagina button{
+    background: transparent;
+    border: none;
+    margin: 0 20px;
+    outline: none;
+}
+
+.pagina .arrow{
+    font-size: 40px;
+}
+
+.pagina .arrow:hover{
+    transition: 300ms;
+    color: #414141;
 }
