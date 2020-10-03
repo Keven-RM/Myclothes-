@@ -6,16 +6,13 @@ import Header from './components/header'
 import Footer from './components/footer'
 import Lista from './pages/Listagem'
 import User from './pages/Usuario'
+import Mensagem from './pages/Mensagem'
 
 
 const App = () => (
-   <React.Fragment>
-   <Header />
-   <React.Fragment>
-      <Lista />
-   </React.Fragment>
-   <Footer />
-   </React.Fragment>
-);
+   <>
+      <Mensagem />
+   </>
+   );
 
 export default App;
