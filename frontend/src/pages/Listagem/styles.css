@@ -61,66 +61,6 @@ main .preco button{
 }
 
 
-.cor{
-    margin-top: 20px;
-    border-top: 1px solid black;
-}
-
-.cor h2{
-    margin-top: 15px;
-}
-.cor label{
-    display: inline-flex;
-    margin: 5px;
-}
-
-.cor label div{
-    border-radius: 20px;
-    height: 35px;
-    width:  35px;
-    border: 1px solid black;
-    cursor: pointer;
-}
-
-.cor input{
-    display: none;
-}
-
-.cor button{
-    background-color: #8a8a8a;
-    height: 30px;
-    width:  100%;
-    margin: 15px 0;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-}
-
-.cor  label[for="preto"] div{
-    background-color: black;
-}
-
-.cor  label[for="azul"] div{
-    background: #4a4ae9;
-}
-
-.cor  label[for="vermelho"] div{
-    background: #eb1212;
-}
-
-.cor  label[for="amarelo"] div{
-    background: #f7f72b;
-}
-
-.cor  label[for="verde"] div{
-    background: #28aa00;
-
-}
-
-.cor  label[for="branco"] div{
-    background: #ffffff;
-}
-
 
 
 .tamanho{

@@ -1,7 +1,6 @@
 import React from 'react';
 import './styles.css';
 
-
 import {BsArrowLeft} from 'react-icons/bs'
 const Mensagem = () =>{
     return(

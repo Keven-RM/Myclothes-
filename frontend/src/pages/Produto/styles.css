@@ -1,0 +1,155 @@
+article{
+    height: 550px;
+    width: 95%;
+    max-width:  1300px;
+    background-color: #dfdfdf;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.43);
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.produto{
+    grid-column: 3fr;
+    height: 550px;
+}
+
+.produto-imagem{
+    height: 90%;
+    display: flex;
+}
+
+.produto-imagem img{
+    height: 100%;
+    margin: 0 auto;
+    transform: scale(1.5);
+}
+
+.produto-info{
+    border-left: 1px solid black;
+    padding: 20px;
+}
+
+.produto-info .titulo{
+    font-size: 35px;
+}
+
+.produto-info .genero, .marca{
+    font-size: 20px;
+}
+
+.produto-info .genero{
+    margin-top: 20px;
+}
+
+.produto-info .preco{
+    font-size: 40px;
+    margin-top: 25px;
+    font-weight: 100;
+}
+
+.cor{
+    margin-top: 20px;
+}
+
+.cor h2{
+    margin-top: 15px;
+}
+.cor label{
+    display: inline-flex;
+    margin: 7px;
+}
+
+.cor label div{
+    border-radius: 20px;
+    height: 30px;
+    width:  30px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.cor input{
+    display: none;
+}
+
+.cor button{
+    background-color: #8a8a8a;
+    height: 30px;
+    width:  100%;
+    margin: 15px 0;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.cor  label[for="preto"] div{
+    background-color: black;
+}
+
+.cor  label[for="azul"] div{
+    background: #4a4ae9;
+}
+
+.cor  label[for="vermelho"] div{
+    background: #eb1212;
+}
+
+.cor  label[for="amarelo"] div{
+    background: #f7f72b;
+}
+
+.cor  label[for="verde"] div{
+    background: #28aa00;
+
+}
+
+.cor  label[for="branco"] div{
+    background: #ffffff;
+}
+
+.produto-info .botões{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.produto-info .botões button{
+    width: 100%;
+    height: 70px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #f0f0f0;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 5px 0;
+    transition: 500ms;
+}
+
+.produto-info .botões .comprar{
+    background-color: #01ce0b;
+}
+
+.produto-info .botões .carrinho{
+    background-color: #0945c7ea;
+}
+
+.produto-info .botões .carrinho:hover{
+    background-color: #0335a0;
+}
+
+.produto-info .botões .comprar:hover{
+    background-color: #009e08;
+}
+
+.voltar{
+    margin: 5px 30px;
+}
+
+.voltar a{
+	font-family: 'Rubik', sans-serif;
+	color: #131313;
+	font-size: 35px;
+	display: flex;
+	align-items: center;
+	padding-top: 10px;
+}
