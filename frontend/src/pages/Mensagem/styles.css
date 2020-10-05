@@ -12,6 +12,7 @@ details{
 	position: relative;
 	width: 700px;
 	border: none;
+	cursor: pointer;
 }
 
 summary{
