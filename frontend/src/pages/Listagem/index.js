@@ -1,17 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './styles.css';
-
+import Image from './image.jpg'
 import {MdArrowForward, MdArrowBack} from 'react-icons/md'
 
-import Image from './image.jpg'
-const Lista = () =>{
-    return(
-        <>
-        <div className="resultado">
-            <h1>Resultado por:</h1>
-            <p>Calça Jeans</p>
-        </div>
+import api from '../../services/api'
 
+export default class Lista extends Component{
+state = {
+    products: []
+};
+
+componentDidMount(){
+    this.LoadProducts();
+}
+
+LoadProducts = async () =>{
+    const response = await api.get("/products");
+
+    this.setState({ products: response.data.docs });
+    console.log(response.data)
+};
+
+    render(){        
+        const { products } = this.state;
+        return(
+        <>
         <container>
         <main>
             <h1>Filtros</h1>
@@ -94,39 +107,70 @@ const Lista = () =>{
         </main>
         <section className="listagem">
                 <ul>
-                        <li>
+                    {products.map(product =>(
+                        <li key={product._id}>
+                        <a href="/i">
+                            <div className="product-image">
+                                <img src={Image} alt={Image}/>
+                            </div>
+                            <div className="product-info" >
+                                <p>{product.title}</p>
+                                <p>{product.description}</p>
+                            </div>
+                        </a>
+                        </li>
+                    ))}
+                        {/* <li>
                         <a href="/i">
                         <div className="product-image">
-                            <img src={Image} alt={Image} />
+                            <img src={Image} alt={Image}/>
                         </div>
                         <div className="product-info" >
                             <p>R$ 200,00</p>
                             <p>Calça Jeans</p>
                         </div>
                         </a>
-                        </li>  
-                        <li>
+                        </li> <li>
                         <a href="/i">
                         <div className="product-image">
-                            <img src={Image} alt={Image} />
+                            <img src={Image} alt={Image}/>
                         </div>
                         <div className="product-info" >
                             <p>R$ 200,00</p>
                             <p>Calça Jeans</p>
                         </div>
                         </a>
-                        </li>  
-                        <li>
+                        </li> <li>
                         <a href="/i">
                         <div className="product-image">
-                            <img src={Image} alt={Image} />
+                            <img src={Image} alt={Image}/>
                         </div>
                         <div className="product-info" >
                             <p>R$ 200,00</p>
                             <p>Calça Jeans</p>
                         </div>
                         </a>
-                        </li>  
+                        </li> <li>
+                        <a href="/i">
+                        <div className="product-image">
+                            <img src={Image} alt={Image}/>
+                        </div>
+                        <div className="product-info" >
+                            <p>R$ 200,00</p>
+                            <p>Calça Jeans</p>
+                        </div>
+                        </a>
+                        </li> <li>
+                        <a href="/i">
+                        <div className="product-image">
+                            <img src={Image} alt={Image}/>
+                        </div>
+                        <div className="product-info" >
+                            <p>R$ 200,00</p>
+                            <p>Calça Jeans</p>
+                        </div>
+                        </a>
+                        </li>   */}
                 </ul>
         </section>
         <div className="pagina">
@@ -137,7 +181,6 @@ const Lista = () =>{
         </container>
         </>
 
-    )
+        )
+    }
 }
-
-export default Lista

@@ -61,6 +61,65 @@ main .preco button{
 }
 
 
+.cor{
+    margin-top: 20px;
+}
+
+.cor h2{
+    margin-top: 15px;
+}
+.cor label{
+    display: inline-flex;
+    margin: 7px;
+}
+
+.cor label div{
+    border-radius: 20px;
+    height: 30px;
+    width:  30px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.cor input{
+    display: none;
+}
+
+.cor button{
+    background-color: #8a8a8a;
+    height: 30px;
+    width:  100%;
+    margin: 15px 0;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.cor  label[for="preto"] div{
+    background-color: black;
+}
+
+.cor  label[for="azul"] div{
+    background: #4a4ae9;
+}
+
+.cor  label[for="vermelho"] div{
+    background: #eb1212;
+}
+
+.cor  label[for="amarelo"] div{
+    background: #f7f72b;
+}
+
+.cor  label[for="verde"] div{
+    background: #28aa00;
+
+}
+
+.cor  label[for="branco"] div{
+    background: #ffffff;
+}
+
 
 
 .tamanho{
@@ -170,14 +229,16 @@ main .preco button{
 
 .listagem{
     width: 950px;
+    height: 800px;
     margin: 30px 10px;
     display: flex;
     background-color: #9b9b9b2a;
+    overflow: hidden;
 }
 
 .listagem ul{
-    display: flex;
-    justify-content: center;
+    display: inline-flex;    
+    flex-wrap: wrap;
 }
 .listagem li{
     width:  250px;
@@ -185,6 +246,7 @@ main .preco button{
     position: relative;
     list-style: none;
     margin: 15px;
+    overflow: hidden;
 }
 
 .listagem li .product-image{

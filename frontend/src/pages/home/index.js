@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles.css';
-import Image from '../../image.jpg'
+import Image from './image.jpg'
 
 import { GiArmoredPants, GiRunningShoe} from 'react-icons/gi';
 import { FaTshirt, FaTransgender } from 'react-icons/fa';
