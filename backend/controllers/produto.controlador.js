@@ -1,19 +1,20 @@
-var produto = require('../models/produto.model');
+var produto = require('../models/Produto.model');
 
 class ProdutoController {
 
-    produto_inserir(req, res){
+    async produto_inserir(req, res){
     try{
-        const produto_inserido = produto.create(req.body)
-    if(produto_inserido) console.log('produto inserido')
+        const produto_inserido = await produto.create(req.body)
+    if(produto_inserido) console.log('produto inserido  ' + req.body.nome)
     else console.log('falha ao adicionar')    
     }catch(error){
         console.log('usuario não adcionado')
     }
     }
 
-    produto_listar(){
-        const listar_produto = produto.find();
+    async produto_listar(req, res){
+        const listar_produto = await produto.find({'genero':'feminino'});
+        return res.send({listar_produto});
     }
 
     produto_buscar(){

@@ -25,6 +25,7 @@ app.use('/lista',       require('./router/lista.rota'));
 app.use('/produto',     require('./router/produto.rota')); //visualização de um produto expecifico
 app.use('/notificacoes',require('./router/mensagem.rota'));
 
-app.listen(4000);
+var porta = 4000
+app.listen(porta);
 
-console.log('online');
+console.log('Online na porta ' + porta);

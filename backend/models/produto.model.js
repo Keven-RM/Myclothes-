@@ -7,9 +7,11 @@ var produtoSchema = new Schema({
     valor:{type: Number, require:true},
     tamanho:{type: String, require:true, num:['PP', 'P','M', 'G', 'GG', 'XGG']},
     estoque:{type: Number, require:true},
-    marca:{type: String, require:true},
+    marca:{type: String, require:true, num:['nike', 'adidas','oakley', 'fila']},
     cor:{type: String, require:true, enum:['preto', 'azul', 'vermelho', 'branco', 'amarelo', 'verde'] } ,
-    descricao:{type: String, require:true}
+    descricao:{type: String, require:true}, 
+    imagem:{type: String, require:true}
+    
 });
 
 module.exports = mongoose.model('Produto', produtoSchema, 'produto');
