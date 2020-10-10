@@ -2,18 +2,24 @@ const usuario = require('../models/user.model');
 
 class UsuarioController{
 
-usuario_inserir(req, res){
+async usuario_inserir(req, res){
     try{
-        const usuario_inserido = usuario.create(req.body)
-        if(usuario_inserido) console.log('usuario inserido')
+        const usuario_inserido = await usuario.create(req.body)
+        if(usuario_inserido) console.log('Usuario inserido  ' + req.body.nome)
         else console.log('falha ao adicionar')
     }catch(error){
+        console.log(error)
         console.log('usuario não adcionado')
         }
 }
 
-usuario_listar(){
-    const listar_usuario = usuario.find()
+async usuario_listar(req, res){
+    try{
+        const listar_usuario = await usuario.find({})
+        return res.send({listar_usuario});
+    }catch(error){
+        console.log('não foi possivel listar os produtos')
+        }
 }
 
 usuario_buscar(){

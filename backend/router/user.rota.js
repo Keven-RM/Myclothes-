@@ -9,6 +9,8 @@ const controllerentrega = new entregacontroller();
 
 //localhost:3000/api/listar
 router.get('/', itemcontroller.usuario_listar);
+//localhost:3000/api/inserir
+router.post('/inserir', itemcontroller.usuario_inserir);
 //cartão
 router.get('/cartao', itemcontroller.cartao_listar);
 router.post('/cartao/inserir', itemcontroller.cartao_listar);
