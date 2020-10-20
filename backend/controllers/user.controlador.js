@@ -5,11 +5,11 @@ class UsuarioController{
 async usuario_inserir(req, res){
     try{
         const usuario_inserido = await usuario.create(req.body)
-        if(usuario_inserido) console.log('Usuario inserido  ' + req.body.nome)
+        if(usuario_inserido) console.log('Usuario '+ req.body.nome+' inserido')
         else console.log('falha ao adicionar')
     }catch(error){
         console.log(error)
-        console.log('usuario não adcionado')
+        console.log('usuario '+ req.body.nome+' não adcionado')
         }
 }
 

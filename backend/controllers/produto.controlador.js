@@ -1,3 +1,4 @@
+const { json } = require('express');
 var produto = require('../models/Produto.model');
 
 class ProdutoController {
@@ -5,7 +6,7 @@ class ProdutoController {
     async produto_inserir(req, res){
         try{
             const produto_inserido = await produto.create(req.body)
-        if(produto_inserido) console.log('produto inserido  ' + req.body.nome)
+        if(produto_inserido) console.log('produto inserido: ' + req.body.nome)
         else console.log('falha ao adicionar')    
         }catch(error){
             console.log('usuario não adcionado')
@@ -15,15 +16,18 @@ class ProdutoController {
     async produto_listar(req, res){
         try{
             const listar_produto = await produto.find({});
-                return res.send({listar_produto});
+            return res.status(200).json(listar_produto);
         }catch(error){
-            console.log('Não foi posivel listar ' + listar_produto)
+            console.log('Não foi posivel listar: ' + listar_produto)
         }
     }
 
 
-    produto_buscar(req, res){
-        const dados_produto = produto.findById(req.body)
+    async produto_buscar(req, res){
+        const _id = req.params.id;
+        
+        const dados_produto = await produto.findById({_id})
+        return res.status(200).json(dados_produto);
     };
     
     async produto_filtro(req, res){
