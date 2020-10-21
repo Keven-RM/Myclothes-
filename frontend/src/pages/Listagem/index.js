@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './styles.css';
-import Image from './image.jpg'
 import {MdArrowForward, MdArrowBack} from 'react-icons/md'
 
 import api from '../../services/api'
@@ -15,9 +14,9 @@ componentDidMount(){
 }
 
 LoadProducts = async () =>{
-    const response = await api.get("/products");
+    const response = await api.get("/produto/listar");
 
-    this.setState({ products: response.data.docs });
+    this.setState({ products: response.data });
     console.log(response.data)
 };
 
@@ -108,69 +107,18 @@ LoadProducts = async () =>{
         <section className="listagem">
                 <ul>
                     {products.map(product =>(
-                        <li key={product._id}>
+                        <li key={product.id}>
                         <a href="/i">
                             <div className="product-image">
-                                <img src={Image} alt={Image}/>
+                                <img src={product.imagem} alt={product.imagem}/>
                             </div>
                             <div className="product-info" >
-                                <p>{product.title}</p>
-                                <p>{product.description}</p>
+                                <p>{product.nome}</p>
+                                <p>R$ {product.valor}</p>
                             </div>
                         </a>
                         </li>
                     ))}
-                        {/* <li>
-                        <a href="/i">
-                        <div className="product-image">
-                            <img src={Image} alt={Image}/>
-                        </div>
-                        <div className="product-info" >
-                            <p>R$ 200,00</p>
-                            <p>Calça Jeans</p>
-                        </div>
-                        </a>
-                        </li> <li>
-                        <a href="/i">
-                        <div className="product-image">
-                            <img src={Image} alt={Image}/>
-                        </div>
-                        <div className="product-info" >
-                            <p>R$ 200,00</p>
-                            <p>Calça Jeans</p>
-                        </div>
-                        </a>
-                        </li> <li>
-                        <a href="/i">
-                        <div className="product-image">
-                            <img src={Image} alt={Image}/>
-                        </div>
-                        <div className="product-info" >
-                            <p>R$ 200,00</p>
-                            <p>Calça Jeans</p>
-                        </div>
-                        </a>
-                        </li> <li>
-                        <a href="/i">
-                        <div className="product-image">
-                            <img src={Image} alt={Image}/>
-                        </div>
-                        <div className="product-info" >
-                            <p>R$ 200,00</p>
-                            <p>Calça Jeans</p>
-                        </div>
-                        </a>
-                        </li> <li>
-                        <a href="/i">
-                        <div className="product-image">
-                            <img src={Image} alt={Image}/>
-                        </div>
-                        <div className="product-info" >
-                            <p>R$ 200,00</p>
-                            <p>Calça Jeans</p>
-                        </div>
-                        </a>
-                        </li>   */}
                 </ul>
         </section>
         <div className="pagina">
