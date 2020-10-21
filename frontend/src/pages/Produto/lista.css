@@ -1,0 +1,328 @@
+.resultado{
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    height: 50px;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+.resultado p{
+    font-size: 20pt;
+    margin: 5px 0 0;
+}
+
+container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 2fr 80px;
+}
+
+main{
+    width: 300px;
+    background: #d3d2d2;
+    margin:30px;
+    padding: 10px;
+}
+main h1,h2{
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+main .preco{
+    display: inline-block;
+    padding: 15px 0;
+}
+
+main .preco h2{
+    padding: 10px 0;
+}
+
+main form label{
+    font-size: 21px;
+    font-family: 'Rubik', sans-serif;
+}
+
+main .preco input[type="text"]{
+    width: 60px;
+    margin: 0 5px;
+    font-size: 20px;
+    outline: none;
+}
+
+main .preco button{
+    background-color: #8a8a8a;
+    height: 30px;
+    width:  65px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+
+.cor{
+    margin-top: 20px;
+}
+
+.cor h2{
+    margin-top: 15px;
+}
+.cor label{
+    display: inline-flex;
+    margin: 7px;
+}
+
+.cor label div{
+    border-radius: 20px;
+    height: 30px;
+    width:  30px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.cor input{
+    display: none;
+}
+
+.cor button{
+    background-color: #8a8a8a;
+    height: 30px;
+    width:  100%;
+    margin: 15px 0;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.cor  label[for="preto"] div{
+    background-color: black;
+}
+
+.cor  label[for="azul"] div{
+    background: #4a4ae9;
+}
+
+.cor  label[for="vermelho"] div{
+    background: #eb1212;
+}
+
+.cor  label[for="amarelo"] div{
+    background: #f7f72b;
+}
+
+.cor  label[for="verde"] div{
+    background: #28aa00;
+
+}
+
+.cor  label[for="branco"] div{
+    background: #ffffff;
+}
+
+
+
+.tamanho{
+    border-top: 1px solid black;
+}
+
+.tamanho form h2{
+    margin: 15px 0;
+}
+
+.tamanho form input{
+    outline: none;
+    font-size: 25px;
+    padding: 5px 0;
+    font: 12px Arial, Helvetica, sans-serif;
+    width: 200px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px -2px rgba(0,0,0,0.51);
+}
+
+.tamanho form button{
+    background-color: #8a8a8a;
+    height: 35px;
+    width:  65px;
+    margin: 15px 7px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.marca{
+    border-top: 1px solid black;
+}
+
+.marca form h2{
+    margin: 5px 0;
+}
+
+.marca form input{
+    outline: none;
+    font-size: 25px;
+    padding: 5px 0;
+    font: 12px Arial, Helvetica, sans-serif;
+    width: 200px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px -2px rgba(0,0,0,0.51);
+
+}
+
+.marca form button{
+    background-color: #8a8a8a;
+    height: 35px;
+    width:  65px;
+    margin: 15px 7px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.genero form label div{
+    background-color: #e7e7e7;
+    height: 35px;
+    width:  110px;
+    padding: 5px;
+    margin: 15px 7px;
+    border-radius: 5px;
+    border: 1px solid #0000009d;
+    outline: none;
+    padding: auto;
+    cursor: pointer;
+}
+
+.genero{
+    border-top: 1px solid black;
+}
+
+.genero form h2{
+    margin: 10px 0;
+}
+
+.genero form input{
+    display: none;
+}
+
+.genero .labels{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;   
+}
+
+
+.genero form button{
+    background-color: #8a8a8a;
+    height: 35px;
+    width:  100%;
+    margin: 10px 0px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+
+.listagem{
+    width: 950px;
+    height: 800px;
+    margin: 30px 10px;
+    display: flex;
+    background-color: #9b9b9b2a;
+    overflow: hidden;
+}
+
+.listagem ul{
+    display: inline-flex;    
+    flex-wrap: wrap;
+}
+.listagem li{
+    width:  250px;
+    height: 350px;
+    position: relative;
+    list-style: none;
+    margin: 15px;
+    overflow: hidden;
+}
+
+.listagem li .product-image{
+    overflow: hidden;
+    width: 250px;
+    height: 285px;
+    display: flex;
+}
+
+.listagem li .product-image img{
+    width: 250px;
+    transition: 0.2s;
+}
+
+.listagem li .product-image img:hover{
+    transition: 300ms;
+    transform: scale(1.5);
+    
+}
+
+.listagem li .product-info{
+    height: 65px;
+    width: 100%;
+    background-color: #ececec;
+    border-radius: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.listagem li .product-info p{
+    display: flex;
+    justify-content: center;
+    font-size: 16pt;
+    margin: 5px 0;
+    font-weight: 600;
+    color: #030303;
+}
+
+.listagem li .product-info p:last-child{
+    font-weight: 500;
+}
+
+.listagem li .product-info p:hover{
+    color: #202020;
+}
+
+
+.pagina{
+    max-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+} 
+
+.pagina h2{
+    font-size: 24pt;
+}
+
+.pagina button{
+    background: transparent;
+    border: none;
+    margin: 0 20px;
+    outline: none;
+}
+
+.pagina .arrow{
+    font-size: 40px;
+}
+
+.pagina .arrow:hover{
+    transition: 300ms;
+    color: #414141;
+}

@@ -17,12 +17,13 @@ article{
 .produto-imagem{
     height: 90%;
     display: flex;
+    overflow: hidden;
 }
 
 .produto-imagem img{
     height: 100%;
-    margin: 0 auto;
-    transform: scale(1.5);
+    margin:  auto;
+    transform: translateY(10%);
 }
 
 .produto-info{
@@ -32,15 +33,15 @@ article{
 
 .produto-info .titulo{
     font-size: 35px;
+    margin-bottom: 10px;
 }
 
-.produto-info .genero, .marca{
+.produto-info .info{
     font-size: 20px;
+    padding: 5px 0;
+    border-top: solid 1px black;
 }
 
-.produto-info .genero{
-    margin-top: 20px;
-}
 
 .produto-info .preco{
     font-size: 40px;
