@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './styles.css';
 
 //icones - react-icons 
@@ -9,8 +9,8 @@ import {
     FaUserAlt
 } from 'react-icons/fa';
 
-
-const Header = () =>{
+class Header extends Component {
+    render(){
     return(
         <header>
             <div className="title">
@@ -19,9 +19,9 @@ const Header = () =>{
             <div className="search-bar">
                 <form>
                     <input name="search" type="text" />
-                    <button type="submit">
+                    <a href={`lista/${this.props.url}`}>
                         <FaSistrix />
-                    </button>
+                    </a>
                 </form>
             </div>
             <div className="perfil">
@@ -33,7 +33,7 @@ const Header = () =>{
             </div>
         </header>
     )
-    
+    }
 }
 
 export default Header;

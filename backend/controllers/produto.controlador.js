@@ -21,8 +21,8 @@ class ProdutoController {
             console.log('Não foi posivel listar: ' + listar_produto)
         }
     }
-
-
+    
+    
     async produto_buscar(req, res){
         const _id = req.params.id;
         

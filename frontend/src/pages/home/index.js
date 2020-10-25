@@ -1,14 +1,16 @@
 import React from 'react';
 import './styles.css';
-import Image from './image.jpg'
 
 import { GiArmoredPants, GiRunningShoe} from 'react-icons/gi';
 import { FaTshirt, FaTransgender } from 'react-icons/fa';
 
+import Header from '../../components/header'
+import Footer from '../../components/footer'
 const Home = () =>{
     return(
         <>
         <>
+        <Header/>
         <main className="welcome">
             <h1>MyClothes</h1>
             <p>O seu produto a um click de distância!</p>
@@ -22,7 +24,7 @@ const Home = () =>{
                         <li>
                         <a href="/i">
                         <div className="product-image">
-                            <img src={Image} alt={Image} />
+                            <img src="http://google.com" />
                         </div>
                         <div className="product-info" >
                             <p>R$ 200,00</p>
@@ -66,6 +68,7 @@ const Home = () =>{
                 <li><FaTshirt className="icons"/><p>Camisa</p></li>
             </ul>
         </section>
+        <Footer />
         </>
         </>
     )
