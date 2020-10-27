@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
-import './styles.css';
 import {MdArrowForward, MdArrowBack} from 'react-icons/md'
 
 import api from '../../services/api'
+import './styles.css';
 
 export default class Lista extends Component{
-state = {
-    products: []
-};
-
-componentDidMount(){
-    this.LoadProducts();
-}
-
-LoadProducts = async () =>{
-    const response = await api.get("/produto/listar");
-
-    this.setState({ products: response.data });
-    console.log(response.data)
-};
-
+    state = {
+        products: []
+    };
+    
+    componentDidMount(){
+        this.LoadProducts();
+    }
+    
+    LoadProducts = async () =>{
+        const response = await api.get("/produto/listar");
+        
+        this.setState({ products: response.data });
+        console.log(response.data)
+    };
+    
     render(){        
         const { products } = this.state;
         return(

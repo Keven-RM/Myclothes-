@@ -8,6 +8,7 @@ import Lista from './pages/Listagem'
 import User from './pages/Usuario'
 import Produto from './pages/Produto'
 import Home from './pages/Home'
+import Login from './pages/Login'
 
 const App = () => (
    <>
@@ -15,10 +16,11 @@ const App = () => (
    <BrowserRouter>
       <Switch>
          <Route exact path='/' component={Home} />
-         <Route exact path='/produto/listar/:search' component={Lista} />
+         <Route exact path='/produto/listar/' component={Lista} />
          <Route exact path='/user' component={User} />
          <Route exact path='/produto/:id' component={Produto} />      
          <Route exact path='/mesagem' component={Mensagem} />
+         <Route exact path='/login' component={Login} />
       </Switch>
    </BrowserRouter>
    </>
