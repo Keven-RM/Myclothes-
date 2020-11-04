@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Link } from 'react';
 import './styles.css'
 import {BsArrowLeft} from 'react-icons/bs'
 
@@ -16,7 +16,7 @@ componentDidMount(){
 
 
 LoadProducts = async () =>{
-    const response = await api.get(`produto/${this.props.url}`)
+    const response = await api.get(`produto/${this.props.match.params.id}`)
     this.setState({ product: response.data });
     console.log(response.data)
 };
@@ -26,7 +26,7 @@ LoadProducts = async () =>{
     return(
         <>
         <div className="voltar">
-            <a href="#"><BsArrowLeft /> Voltar</a>
+            <Link to="#"><BsArrowLeft /> Voltar</Link>
         </div>
             <article>
 
@@ -41,7 +41,7 @@ LoadProducts = async () =>{
                     <h2 className="titulo">{product.nome}</h2>
                     <p className="info">Gênero: {product.genero}</p>
                     <p className="info">Marca: {product.marca}</p>
-                    <p className="info">Detalhes: {product.descricao}</p>
+                    <p className="info" className="descricao">Detalhes: {product.descricao}</p>
                     <h2 className="preco">R$ {product.valor}</h2>
                 <div className="cor"> 
                     <form>

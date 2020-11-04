@@ -12,7 +12,8 @@ import Login from './pages/Login'
 
 const App = () => (
    <>
-      {/* <Produto url="5f7e738f43508514b8d098da" /> */}
+      {/* <Produto url="5f7e738f43508514b8d098da" /> *
+   
    <BrowserRouter>
       <Switch>
          <Route exact path='/' component={Home} />
@@ -22,8 +23,11 @@ const App = () => (
          <Route exact path='/mesagem' component={Mensagem} />
          <Route exact path='/login' component={Login} />
       </Switch>
-   </BrowserRouter>
+   </BrowserRouter> */}
+   
+   <Login />
    </>
+
    );
 
 export default App;

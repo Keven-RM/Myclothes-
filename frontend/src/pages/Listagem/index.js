@@ -107,8 +107,8 @@ export default class Lista extends Component{
         <section className="listagem">
                 <ul>
                     {products.map(product =>(
-                        <li key={product.id}>
-                        <a href="/i">
+                        <li key={product._id}>
+                        <a href={`/produto/${product._id}`}>
                             <div className="product-image">
                                 <img src={product.imagem} alt={product.imagem}/>
                             </div>

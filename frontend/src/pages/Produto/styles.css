@@ -42,6 +42,9 @@ article{
     border-top: solid 1px black;
 }
 
+.produto-info .descricao{
+    max-height: 10px;
+}
 
 .produto-info .preco{
     font-size: 40px;
