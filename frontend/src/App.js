@@ -1,8 +1,8 @@
 import React from 'react';
 import './app.css'
 import { Switch, Route, BrowserRouter} from 'react-router-dom'
-//components
 
+//components
 import Mensagem from './pages/Mensagem'
 import Lista from './pages/Listagem'
 import User from './pages/Usuario'

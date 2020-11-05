@@ -1,5 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import api from '../../services/api';
+import './styles.css'
 
 export default function Login(){
   const [email, setEmail] = useState('');
@@ -7,13 +8,14 @@ export default function Login(){
   const [aguarde, setAguarde] = useState('');
   
   function handleClick(event) {
-    event.preventDefault();
+    event.preventDefault(); //EVITA QUE A PAGINA RECARREGE
     
-    setAguarde('Aguarde...')
+    setAguarde('Aguarde...') //MENSAGEM DE ESPERA
   
+    //FAZ A AUTENTICAÇÃO DO USUARIO
     api.post(`/user/autenticar`, {email, senha})
       .then(res => {
-          if(res.data === false){
+          if(res.data === true){
             console.log(res.data);
             window.location.href = "http://localhost:3000/login";
           }
@@ -22,17 +24,15 @@ export default function Login(){
 
     return (
       <div>
-          <form onSubmit={handleClick}>
-            <label>
-              Person Name:
-              <br />
+          <form onSubmit={handleClick} className="form-login">
+              <h2>Login</h2>
+              <label for="email">Email</label>
               <input type="text" name="email" onChange={event => setEmail(event.target.value)} />
-              <input type="text" name="senha" onChange={event => setSenha(event.target.value)} />
-            </label>
-            <button type="submit">Add</button>
+              <label for="senha">Senha</label>
+              <input type="password" name="senha" onChange={event => setSenha(event.target.value)} />
+            <button type="submit">Entrar</button>
+            <p><i>{aguarde}</i></p>
           </form>
-            <p>{aguarde}</p>
         </div>
-
         )
 }
