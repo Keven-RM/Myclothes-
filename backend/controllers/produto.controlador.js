@@ -3,15 +3,15 @@ var produto = require('../models/Produto.model');
 
 class ProdutoController {
 
-    async produto_inserir(req, res){
-        try{
-            const produto_inserido = await produto.create(req.body)
-        if(produto_inserido) console.log('produto inserido: ' + req.body.nome)
-        else console.log('falha ao adicionar')    
-        }catch(error){
-            console.log('usuario não adcionado')
+        async produto_inserir(req, res){
+            try{
+                const produto_inserido = await produto.create(req.body)
+            if(produto_inserido) console.log('produto inserido: ' + req.body.nome)
+            else console.log('falha ao adicionar')
+            }catch(error){
+                console.log('usuario não adcionado')
+            }
         }
-    }
 
     async produto_listar(req, res){
         try{

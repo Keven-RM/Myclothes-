@@ -8,7 +8,9 @@ const entregacontroller = require('../controllers/entrega.controlador');
 const controllerentrega = new entregacontroller();
 
 //localhost:3000/api/listar
-router.get('/', itemcontroller.usuario_listar);
+router.get('/listar', itemcontroller.usuario_listar);
+router.get('/:email', itemcontroller.usuario_buscar);
+router.post('/autenticar', itemcontroller.usuario_autenticar);
 //localhost:3000/api/inserir
 router.post('/inserir', itemcontroller.usuario_inserir);
 //cartão
@@ -18,7 +20,7 @@ router.put('/cartao/alterar', itemcontroller.cartao_alterar);
 router.delete('/cartao/delete', itemcontroller.cartao_remover);
 //Carrinho
 router.get('/carrinho', itemcontroller.carrinho_listar);
-router.post('/carrinho/inserir', itemcontroller.carrinho_inserir);
+router.post('/carrinho/inserir/:email/:id', itemcontroller.carrinho_inserir);
 router.delete('/carrinho/delete', itemcontroller.carrinho_remover);
 //Endereço
 router.get('/endereco', itemcontroller.endereco_listar);

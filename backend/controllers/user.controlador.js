@@ -1,38 +1,70 @@
 const usuario = require('../models/user.model');
-
 class UsuarioController{
 
 async usuario_inserir(req, res){
+        const email  = req.body.email
+    
     try{
-        const usuario_inserido = await usuario.create(req.body)
-        if(usuario_inserido) console.log('Usuario '+ req.body.nome+' inserido')
-        else console.log('falha ao adicionar')
+        if(await usuario.findOne({email})){
+            return res.status(400).send('Usuario já existe')
+        }
+        
+        const usuario_inserido = await usuario.create(req.body) 
+
+        if(usuario_inserido){
+            return res.status(200).send('Sua conta foi criada') 
+            console.log('Usuario '+ req.body.nome+' inserido')
+        }else console.log('falha ao adicionar')
+
     }catch(error){
         console.log(error)
         console.log('usuario '+ req.body.nome+' não adcionado')
         }
 }
 
-async usuario_listar(req, res){
-    try{
-        const listar_usuario = await usuario.find({})
-        return res.send({listar_usuario});
-    }catch(error){
-        console.log('não foi possivel listar os produtos')
+    async usuario_listar(req, res){
+        try{
+            const listar_usuario = await usuario.find({})
+            return res.status(200).send(listar_usuario)
+        }catch(error){
+            console.log('não foi possivel listar os produtos')
+            }
         }
-}
 
-usuario_buscar(){
-    const dados_usuario = usuario.findById()
-}
+    //AUTENTICAR
+    async usuario_autenticar(req, res){
+        try{
+            const email_usuario  = req.body.email
+            const senha_usuario = req.body.senha
+            const resultado = await usuario.findOne({email: email_usuario, senha: senha_usuario})
 
-usuario_alterar(){
-    const aterar_usuario = usuario.findByIdAndUpdate()
-}
+            if(resultado){
+            return res.send(true)
+            }else{
+                return res.send(false)
+            }
 
-usuario_remover(){
-    const remover_usuario = usuario.findByIdAndRemove()
-}
+        }catch(error){
+            console.log(error)
+        }
+    }
+
+
+
+    async usuario_buscar(req, res){
+        const user_email = req.params.email;
+        
+        const dados_produto = await usuario.findOne({email: user_email})
+        return res.status(200).json(dados_produto);
+    };
+
+    usuario_alterar(){
+        const aterar_usuario = usuario.findByIdAndUpdate()
+    }
+
+    usuario_remover(){
+        const remover_usuario = usuario.findByIdAndRemove()
+    }
 
 //Cartão
     cartao_inserir(req, res){
@@ -56,8 +88,12 @@ usuario_remover(){
         const listar_carrinho = usuario.find()
     }
 
-    carrinho_inserir(){
-        const inserir_carrinho = usuario.create()
+    async carrinho_inserir(req, res){
+        console.log(req.params.id)
+            const inserir_carrinho = await usuario.findOneAndUpdate({email: req.params.email} , {$push: {produtos_comprados:req.params.id} }, {
+            new: true
+        });
+        console.log(inserir_carrinho)
     }
     
     carrinho_remover(){
