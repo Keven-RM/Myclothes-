@@ -1,9 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './styles.css';
+import api from '../../services/api'
+
 import { IoIosArrowForward } from 'react-icons/io';
 import { AiOutlinePlus } from 'react-icons/ai';
 
-const User = () =>{
+export default function User(){
+    const [user, setUser] = useState('');
+
+    const UserEmail = sessionStorage.getItem('user-email')
+    
+    //carregar informações do usuario 
+    async function loadUser(){
+        await api.get(`/user/${UserEmail}`)
+            .then(res =>{
+                setUser(res.data)
+            }
+        )
+    }
+
+    useEffect(() => {
+        loadUser();
+      }, []);
+    
+      console.log(user)
     return(
         <>
         <container>
@@ -12,22 +32,22 @@ const User = () =>{
             <h1>Conta</h1>
             <div>
                 <span>Nome</span>
-                <p>Keven Rodrigues Meirelles</p>
+                <p>{user.nome}</p>
                 <IoIosArrowForward className="icons" />
             </div>
             <div>
                 <span>Email</span>
-                <p>nome@gmail.com</p>
+                <p>{user.email}</p>
                 <IoIosArrowForward className="icons" />
             </div>
             <div>
                 <span>Senha</span>
-                <p>***********</p>
+                <p>{user.senha}</p>
                 <IoIosArrowForward className="icons" />
             </div>
             <div>
-                <span>RG</span>
-                <p>234567890-99</p>
+                <span>CPF</span>
+                <p>{user.CPF}</p>
                 <IoIosArrowForward className="icons" />
             </div>
         </section>
@@ -45,7 +65,7 @@ const User = () =>{
         <h1>Cartão</h1>         
             <div>
                 <span>Cartão</span>
-                <p>2345.6789.0456.7842</p>
+                <p>{user.cartao}</p>
                 <IoIosArrowForward className="icons" />
             </div>
             <div>
@@ -73,5 +93,3 @@ const User = () =>{
         </>
     )
 }
-
-export default User;

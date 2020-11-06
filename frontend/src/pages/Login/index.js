@@ -17,9 +17,12 @@ export default function Login(){
       .then(res => {
           if(res.data === true){
             console.log(res.data);
-            window.location.href = "http://localhost:3000/login";
+            window.location.href = "http://localhost:3000/user";
+
+            //ENVIANDO OS DADOS DO LOGIN PARA A SESSÃO DO SITE
+            sessionStorage.setItem("user-email", email);
           }
-      })
+        })
     }
 
     return (
