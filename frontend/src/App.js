@@ -7,7 +7,7 @@ import Mensagem from './pages/Mensagem'
 // import Lista from './pages/Listagem'
 import Produto from './pages/Produto'
 // import Home from './pages/Home'
-import User from './pages/Usuario'
+import User from './pages/Usuario/'
 import Login from './pages/Login'
 
 const App = () => (
@@ -17,9 +17,8 @@ const App = () => (
    <BrowserRouter>
       <Switch>
          {/* <Route exact path='/' component={Home} />*/}
-         {/* <Route exact path='/produto/listar/' component={Lista} /> */}
-         <Route exact path='/produto/:id' 
-        component={Produto} />      
+         {/* <Route exact path='/produto/' component={Lista} /> */}
+         <Route exact path='/produto/:id' component={Produto} />      
          <Route exact path='/mesagem' component={Mensagem} /> 
          <Route exact path='/user' component={User} />
          <Route exact path='/login' component={Login} />

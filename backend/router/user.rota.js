@@ -8,11 +8,14 @@ const entregacontroller = require('../controllers/entrega.controlador');
 const controllerentrega = new entregacontroller();
 
 //localhost:3000/api/listar
+router.post('/inserir', itemcontroller.usuario_inserir);
 router.get('/listar', itemcontroller.usuario_listar);
 router.get('/:email', itemcontroller.usuario_buscar);
 router.post('/autenticar', itemcontroller.usuario_autenticar);
-//localhost:3000/api/inserir
-router.post('/inserir', itemcontroller.usuario_inserir);
+
+//alterar infos do usuario
+router.post('/senha/alterar/:email/:senha', itemcontroller.usuario_alterar_senha);
+
 //cartão
 router.get('/cartao', itemcontroller.cartao_listar);
 router.post('/cartao/inserir', itemcontroller.cartao_listar);

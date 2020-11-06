@@ -19,6 +19,7 @@ export default function User(){
         )
     }
 
+
     useEffect(() => {
         loadUser();
       }, []);
@@ -33,12 +34,10 @@ export default function User(){
             <div>
                 <span>Nome</span>
                 <p>{user.nome}</p>
-                <IoIosArrowForward className="icons" />
             </div>
             <div>
                 <span>Email</span>
                 <p>{user.email}</p>
-                <IoIosArrowForward className="icons" />
             </div>
             <div>
                 <span>Senha</span>

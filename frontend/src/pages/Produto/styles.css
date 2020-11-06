@@ -46,6 +46,12 @@ article{
     max-height: 10px;
 }
 
+.produto-info .genero, .marca{
+    border-top: 1px solid black;
+    margin: 20px 0;
+    font-size: 20px;
+}
+
 .produto-info .preco{
     font-size: 40px;
     margin-top: 25px;

@@ -13,7 +13,6 @@ async usuario_inserir(req, res){
 
         if(usuario_inserido){
             return res.status(200).send('Sua conta foi criada') 
-            console.log('Usuario '+ req.body.nome+' inserido')
         }else console.log('falha ao adicionar')
 
     }catch(error){
@@ -49,8 +48,6 @@ async usuario_inserir(req, res){
         }
     }
 
-
-
     async usuario_buscar(req, res){
         const user_email = req.params.email;
         
@@ -58,8 +55,11 @@ async usuario_inserir(req, res){
         return res.status(200).json(dados_produto);
     };
 
-    usuario_alterar(){
-        const aterar_usuario = usuario.findByIdAndUpdate()
+    async usuario_alterar_senha(req, res){
+            await usuario.findOneAndUpdate({email: req.params.email}, {senha: req.params.senha}, {
+                new: true
+            });
+        return res.status(200).send('criado')
     }
 
     usuario_remover(){
@@ -93,13 +93,15 @@ async usuario_inserir(req, res){
             const inserir_carrinho = await usuario.findOneAndUpdate({email: req.params.email} , {$push: {produtos_comprados:req.params.id} }, {
             new: true
         });
-        console.log(inserir_carrinho)
+        return res.status(201).send(`Produto comprodado:${inserir_carrinho.produtos_comprados} por - ${req.params.email}`)
     }
-    
+
     carrinho_remover(){
         const remover_carrinho = usuario.findByIdAndRemove()
     }
-//Endereço
+
+
+    //Endereço
     endereco_inserir(req, res){
         const endereco_inserido = usuario.create(req.body)
     }

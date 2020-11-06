@@ -1,32 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import './styles.css'
 import api from '../../services/api'
+
 import {BsArrowLeft} from 'react-icons/bs'
 
 export default function Produto(props){
     const [produto, setProduto] = useState('')
+    
+    const userEmail = sessionStorage.getItem('user-email');
 
     async function loadProduct(){
         const response = await api.get(`produto/${props.match.params.id}`)
         setProduto(response.data);
-    
-        console.log(produto)
+        console.log(response.data)
+
     };
-
-    async function getUser(){
-        const userEmail = sessionStorage.getItem('user-email');
-
-    }
 
     async function addCarrinho(){
         await api.post(`/user/carrinho/inserir/${userEmail}/${props.match.params.id}`)
     }
 
-    getUser()
-    loadProduct()
-    // useEffect(() => {
-    // }, [3]);
-        
+    useEffect(()=>{
+        loadProduct()
+    }, [setProduto])
         
     return(
         <>
@@ -54,8 +50,7 @@ export default function Produto(props){
                     </div>
 
                     <div className="botões">
-                        <button type="submit" className="carrinho">Adicionar ao carrinho</button>
-                        <button type="submit" className="comprar" onClick={addCarrinho()}>Comprar</button>
+                        <button type="submit" className="comprar" onClick={addCarrinho}>Comprar</button>
                     </div>
                 </div>
             </article>
