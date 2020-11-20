@@ -15,7 +15,6 @@ export default class Lista extends Component{
     
     LoadProducts = async () =>{
         const response = await api.get("/produto/listar");
-        
         this.setState({ products: response.data });
         console.log(response.data)
     };

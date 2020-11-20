@@ -10,7 +10,7 @@ export default function Login(){
   function handleClick(event) {
     event.preventDefault(); //EVITA QUE A PAGINA RECARREGE
     
-    setAguarde('Aguarde...') //MENSAGEM DE ESPERA
+     //MENSAGEM DE ESPERA
   
     //FAZ A AUTENTICAÇÃO DO USUARIO
     api.post(`/user/autenticar`, {email, senha})
@@ -18,9 +18,12 @@ export default function Login(){
           if(res.data === true){
             console.log(res.data);
             window.location.href = "http://localhost:3000/user";
-
+            setAguarde('Aguarde...')
             //ENVIANDO OS DADOS DO LOGIN PARA A SESSÃO DO SITE
             sessionStorage.setItem("user-email", email);
+          }else{
+            setAguarde('...')
+            setAguarde('Email ou senha incorreto!')
           }
         })
     }
@@ -29,9 +32,9 @@ export default function Login(){
       <div>
           <form onSubmit={handleClick} className="form-login">
               <h2>Login</h2>
-              <label for="email">Email</label>
+              <label to="email">Email</label>
               <input type="text" name="email" onChange={event => setEmail(event.target.value)} />
-              <label for="senha">Senha</label>
+              <label to="senha">Senha</label>
               <input type="password" name="senha" onChange={event => setSenha(event.target.value)} />
             <button type="submit">Entrar</button>
             <p><i>{aguarde}</i></p>

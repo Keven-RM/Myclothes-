@@ -4,6 +4,7 @@ import api from '../../services/api'
 
 import { IoIosArrowForward } from 'react-icons/io';
 import { AiOutlinePlus } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 export default function User(){
     const [user, setUser] = useState('');
@@ -56,7 +57,7 @@ export default function User(){
             <div>
                 <span>Mensagens</span>
                 <p>2 novas mensagens</p>
-                <IoIosArrowForward className="icons" />
+                <Link to="mensagem"><IoIosArrowForward className="icons" /></Link>
             </div>
         </section>
 
