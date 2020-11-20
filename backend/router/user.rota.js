@@ -15,10 +15,10 @@ router.post('/autenticar', itemcontroller.usuario_autenticar);
 
 //alterar infos do usuario
 router.post('/senha/alterar/:email/:senha', itemcontroller.usuario_alterar_senha);
+router.post('/cpf/alterar/:email/:cpf', itemcontroller.usuario_alterar_cpf);
 
 //cartão
-router.get('/cartao', itemcontroller.cartao_listar);
-router.post('/cartao/inserir', itemcontroller.cartao_listar);
+router.post('/cartao/inserir/:email/:cartao', itemcontroller.cartao_inserir);
 router.put('/cartao/alterar', itemcontroller.cartao_alterar);
 router.delete('/cartao/delete', itemcontroller.cartao_remover);
 //Carrinho

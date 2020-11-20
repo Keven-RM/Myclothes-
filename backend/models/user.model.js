@@ -6,7 +6,7 @@ var usuarioSchema = new Schema({
     email:{type: String, require:true},
     senha:{type: String, require:true}, 
     CPF:  {type: String, require:true}, //Adicionar limitador para 8 caracteres
-    cartao:{type: String, require:true}, //Adicionar limitador para 16 caracteres
+    cartao:{type: Array, require:true}, //Adicionar limitador para 16 caracteres
     endereco:[{
         cidade : String,
         rua : String,

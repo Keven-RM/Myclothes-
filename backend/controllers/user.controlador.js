@@ -5,10 +5,6 @@ async usuario_inserir(req, res){
         const email  = req.body.email
     
     try{
-        if(await usuario.findOne({email})){
-            return res.status(400).send('Usuario já existe')
-        }
-        
         const usuario_inserido = await usuario.create(req.body) 
 
         if(usuario_inserido){
@@ -62,17 +58,24 @@ async usuario_inserir(req, res){
         return res.status(200).send('criado')
     }
 
+    async usuario_alterar_cpf(req, res){
+        await usuario.findOneAndUpdate({email: req.params.email}, {CPF: req.params.cpf}, {
+            new: true
+        });
+        return res.status(200).send('criado')
+    }
+
     usuario_remover(){
         const remover_usuario = usuario.findByIdAndRemove()
     }
 
 //Cartão
-    cartao_inserir(req, res){
-        const cartao_inserido = usuario.create(req.body)
-    }
+    async cartao_inserir(req, res){
+        const cartao_inserido = await usuario.findOneAndUpdate({email: req.params.email}, {$addToSet: {cartao:req.params.cartao} }, {
+        new: true
+    });
+    return res.status(201).send(`Cartão inserido: ${req.params.cartao} por - ${req.params.email}`)
 
-    cartao_listar(){
-        const listar_cartao = usuario.find()
     }
 
     cartao_alterar(){

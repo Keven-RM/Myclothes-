@@ -23,7 +23,6 @@ app.use(express.static('html'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use('/',            require('./router/home.rota'));
 app.use('/user',        require('./router/user.rota'));
 app.use('/lista',       require('./router/lista.rota'));
 app.use('/produto',     require('./router/produto.rota')); //visualização de um produto expecifico
